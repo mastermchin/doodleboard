@@ -86,8 +86,4 @@ export default class DoodleBoard extends LightningElement {
         this.board.freeDrawingBrush.color = this.brush.color;
         this.board.freeDrawingBrush.width = this.brush.width;
     }
-
-    handleOptionChange(evt) {
-        /* Add code to handle option change and change events here */
-    }
 }
