@@ -1,0 +1,24 @@
+<template>
+    <div class="calendar-container">
+        <div class="slds-grid slds-p-around_x-small">
+            <div class="slds-col slds-p-around_x-small">
+                <c-reservation-date-calendar 
+                    name="arriving" date-id="arriving"
+                    calendar-date={startRangeDate} disable-increment={rangeIsOneMonth}
+                    selected-start-date={selectedStartDate} selected-end-date={selectedEndDate}
+                    onselectday={handleSelectDay}
+                    onchangecalendardate={handleChangeStartRangeDateHandler}>
+                </c-reservation-date-calendar>
+            </div>
+            <div class="slds-col slds-p-around_x-small">
+                <c-reservation-date-calendar 
+                    name="arriving" date-id="departing"
+                    calendar-date={endRangeDate} disable-decrement={rangeIsOneMonth}
+                    selected-start-date={selectedStartDate} selected-end-date={selectedEndDate}
+                    onselectday={handleSelectDay}
+                    onchangecalendardate={handleChangeEndRangeDateHandler}>
+                </c-reservation-date-calendar>
+            </div>
+        </div>
+    </div>
+</template>

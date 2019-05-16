@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/bearList": [
+                "bearList/bearList.js"
+            ],
+            "c/bearLocation": [
+                "bearLocation/bearLocation.js"
+            ],
+            "c/bearMap": [
+                "bearMap/bearMap.js"
+            ],
+            "c/bearSupervisor": [
+                "bearSupervisor/bearSupervisor.js"
+            ],
+            "c/bearTile": [
+                "bearTile/bearTile.js"
+            ],
+            "c/doodleBoard": [
+                "doodleBoard/doodleBoard.js"
+            ],
+            "c/helloWebComponent": [
+                "helloWebComponent/helloWebComponent.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/reservationDateCalendar": [
+                "reservationDateCalendar/reservationDateCalendar.js"
+            ],
+            "c/reservationDateCalendarDay": [
+                "reservationDateCalendarDay/reservationDateCalendarDay.js"
+            ],
+            "c/reservationDateRangeCalendar": [
+                "reservationDateRangeCalendar/reservationDateRangeCalendar.js"
+            ],
+            "c/reservationDateRangePicker": [
+                "reservationDateRangePicker/reservationDateRangePicker.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

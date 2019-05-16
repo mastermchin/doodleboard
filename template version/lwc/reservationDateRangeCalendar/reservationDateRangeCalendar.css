@@ -1,0 +1,13 @@
+:host {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.calendar-container {
+    position: absolute;
+    width: 90%;
+    display: block;
+    background-color: white;
+    z-index: 7000;
+}

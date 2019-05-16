@@ -1,0 +1,60 @@
+<template>
+    <div class="slds-grid slds-grid_align-spread slds-grow slds-m-bottom_x-small">
+        <div class="slds-align_middle">
+            <lightning-button-icon id="prevMonth" onclick={decrementMonth}
+                icon-name="utility:left"  alternative-text="Previous Month" >
+            </lightning-button-icon>
+        </div>
+        <h2 aria-atomic="true" aria-live="assertive" class="slds-align-middle">
+            {currentMonth} {currentYear}
+        </h2>
+        <div class="slds-align_middle">
+            <lightning-button-icon id="nextMonth" onclick={incrementMonth}
+                icon-name="utility:right"  alternative-text="Next Month" >
+            </lightning-button-icon>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-7">
+            <div class="dayHeader">
+                Su
+            </div>
+        </div>
+        <div class="slds-size_1-of-7">
+            <div class="dayHeader">
+                M                
+            </div>
+        </div>
+        <div class="slds-size_1-of-7">
+            <div class="dayHeader">
+                Tu
+            </div>
+        </div>
+        <div class="slds-size_1-of-7">
+            <div class="dayHeader">
+                W
+            </div>
+        </div>
+        <div class="slds-size_1-of-7">
+            <div class="dayHeader">
+                Th
+            </div>
+        </div>
+        <div class="slds-size_1-of-7">
+            <div class="dayHeader">
+                F
+            </div>
+        </div>
+        <div class="slds-size_1-of-7">
+            <div class="dayHeader">
+                Sa
+            </div>
+        </div>
+        <template for:each={days} for:item="day">
+            <c-reservation-date-calendar-day key={day.calendarDate} class="slds-size_1-of-7"
+                calendar-date={day.calendarDate} disabled={day.disabled} selected={day.selected}
+                onselectday={handleSelectDay}>
+            </c-reservation-date-calendar-day>
+        </template>
+    </div>
+</template>

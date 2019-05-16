@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-grid slds-grid_pull-padded slds-wrap slds-m-bottom_small">
+        <div class="slds-form-element slds-p-horizontal_small">
+            <div class="slds-form-element slds-size_1-of-1">
+                <label class="slds-form-element__label">Arriving</label>
+                <div class="slds-form-element__control">
+                    <input type="text" name="start" class="slds-input"
+                        onchange={handleChangeStartDate}/>
+                    <lightning-button-icon 
+                        icon-name="utility:event"  alternative-text="Select a date range" 
+                        class="cal-icon" onclick={handleIconClick}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+        <div class="slds-form-element slds-p-horizontal_small">
+            <div class="slds-form-element slds-size_1-of-1">
+                <label class="slds-form-element__label">Departing</label>
+                <div class="slds-form-element__control">
+                    <input type="text" name="end" class="slds-input" 
+                        onchange={handleChangeEndDate}/>
+                    <lightning-button-icon 
+                        icon-name="utility:event"  alternative-text="Select a date range" 
+                        class="cal-icon" onclick={handleIconClick}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+        <c-reservation-date-range-calendar selected-start-date={selectedStartDate} selected-end-date={selectedEndDate} onselectday={handleSelectDay}
+            class="slds-p-horizontal_small">
+        </c-reservation-date-range-calendar>
+    </div>
+</template>

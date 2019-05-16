@@ -1,0 +1,15 @@
+.day {
+    width: 100%;
+    height: 100%;
+    cursor:pointer;
+}
+
+.day.disabled {
+    background-color: #DDD;
+    color: #999;
+    cursor: text;
+}
+
+.day.selected, .day.in-range {
+    background-color: #005fb2;
+}
